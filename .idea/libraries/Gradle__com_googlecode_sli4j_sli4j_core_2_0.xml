@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.googlecode.sli4j:sli4j-core:2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.sli4j/sli4j-core/2.0/7d95ff1cdb7643abf8fe2f68ea2e3083a983321e/sli4j-core-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.sli4j/sli4j-core/2.0/6bbe25717ac0ef50cebb08e2354b478e6315bf92/sli4j-core-2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

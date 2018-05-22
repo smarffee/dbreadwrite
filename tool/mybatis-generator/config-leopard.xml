@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="mysql-connector-java-5.1.26-bin.jar"/>
+
+    <context id="stormDB" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://db01.zz.com:17102/harbor_jietiao" userId="harbor_jietiao_rw" password="KXckGTagB0TJsG">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.weshare.leopard.model"
+                            targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.weshare.leopard"
+                         targetProject="../../src/main/resources/mapper">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.weshare.leopard.dao.mapper" targetProject="../../src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+       <!-- <table tableName="record_receipt" domainObjectName="RecordReceipt" />-->
+        <!--<table tableName="record_receipt_statist" domainObjectName="RecordReceiptStatist" />-->
+        <table tableName="log_receipt_status" domainObjectName="LogReceiptStatus" />
+
+    </context>
+</generatorConfiguration>

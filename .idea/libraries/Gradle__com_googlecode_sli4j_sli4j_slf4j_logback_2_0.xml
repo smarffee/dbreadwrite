@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.googlecode.sli4j:sli4j-slf4j-logback:2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.sli4j/sli4j-slf4j-logback/2.0/6de43d5c6199592434d2252cb63f66105c12c18f/sli4j-slf4j-logback-2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.googlecode.sli4j/sli4j-slf4j-logback/2.0/5c7c0dbcd41d078bc8df7e45a814ba86e5d61096/sli4j-slf4j-logback-2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
