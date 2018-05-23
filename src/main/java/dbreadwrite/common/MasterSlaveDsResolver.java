@@ -1,6 +1,7 @@
 package dbreadwrite.common;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -25,13 +26,22 @@ public class MasterSlaveDsResolver {
     }
 
     @Before("dataSourceMasterSalvePct()")
-    public void before(JoinPoint joinPoint) {
+    public void doBefore(JoinPoint joinPoint) {
 
         String method = joinPoint.getSignature().getName();
         if(isMasterDataSource(method))
             DynamicDataSourceHolder.setDataSourceKey(dataSourceMasterKey);
         else
             DynamicDataSourceHolder.setDataSourceKey(dataSourceSlaveKey);
+
+    }
+
+    @After("dataSourceMasterSalvePct()")
+    public void doAfter(JoinPoint joinPoint) {
+
+        String method = joinPoint.getSignature().getName();
+        if(!isMasterDataSource(method))
+            DynamicDataSourceHolder.setDataSourceKey(dataSourceMasterKey);
 
     }
 
